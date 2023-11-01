@@ -1,0 +1,52 @@
+    <!doctype html>
+    <html>
+    <head>
+    <title>Welcome</title>
+    <meta name="description" content="Our first page">
+    <meta name="keywords" content="html tutorial template">
+    </head>
+    <body>
+  <input size="128" type="text" id="text_url" name="input_url">
+      <br>
+     <input align="center" type="button" onclick="funcMake()" value="Make">   
+  <br>
+<input size="128" type="text" value="" id="myInput">
+        <br>
+<button align="center" onclick="myFunction()">Copy URL</button>
+
+<script>
+  function toHex(s) {
+    // utf8 to latin1
+    var s = unescape(encodeURIComponent(s))
+    var h = ''
+    for (var i = 0; i < s.length; i++) {
+        h += s.charCodeAt(i).toString(16)
+    }
+    return h
+}
+  
+  function funcMake() {
+  // Get the text field
+  var Text = document.getElementById("text_url");
+ var copyText = document.getElementById("myInput");
+    
+copyText.value = "https://go2site.github.io/?ouix=rtx786786" + toHex(Text.value) + "pqx786786";
+
+}
+  
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  
+
+}
+</script>
+
+    </body>
+    </html>
